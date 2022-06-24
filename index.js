@@ -64,3 +64,11 @@ function allWagesFor(empObj) {
     })
     return total
 }
+
+function calculatePayroll(arrayOfEmp) {
+    let payRollTotal = 0
+    arrayOfEmp.forEach(obj => {
+        payRollTotal += allWagesFor(obj)
+    })
+    return payRollTotal
+}
