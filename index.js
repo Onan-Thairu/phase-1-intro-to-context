@@ -31,3 +31,12 @@ function createTimeInEvent(empObj, date) {
     return empObj
 }
 
+function createTimeOutEvent(empObj, dateStamp) {
+    empObj.timeOutEvents.push ({
+        type: "TimeOut",
+        hour: parseInt(dateStamp.split(" ")[1]),
+        date: dateStamp.split(" ")[0]
+    })
+    return empObj
+}
+
