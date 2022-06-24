@@ -22,3 +22,12 @@ function createEmployeeRecords(arrOfArrays) {
     return EmployeeRecords
 }
 
+function createTimeInEvent(empObj, date) {
+    empObj.timeInEvents.push ({
+        type: "TimeIn",
+        hour: parseInt(date.split(" ")[1]),
+        date: date.split(" ")[0]
+    })
+    return empObj
+}
+
