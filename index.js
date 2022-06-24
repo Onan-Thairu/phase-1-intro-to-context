@@ -15,3 +15,10 @@ function createEmployeeRecord(array) {
         }
     }
 }
+
+function createEmployeeRecords(arrOfArrays) {
+    let EmployeeRecords = []
+    arrOfArrays.map(array => EmployeeRecords.push(createEmployeeRecord(array)))
+    return EmployeeRecords
+}
+
