@@ -50,4 +50,8 @@ function hoursWorkedOnDate(empObj, date) {
     return hours
 }
 
-
+function wagesEarnedOnDate(empObj, date) {
+    const hoursWorked = hoursWorkedOnDate(empObj, date)
+    const payPerHour = empObj.payPerHour
+    return hoursWorked * payPerHour
+}
