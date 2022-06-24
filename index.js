@@ -40,3 +40,14 @@ function createTimeOutEvent(empObj, dateStamp) {
     return empObj
 }
 
+function hoursWorkedOnDate(empObj, date) {
+    const timeinObj = empObj.timeInEvents.find(dayObj => dayObj.date === date)
+    const timeinHours = timeinObj.hour
+    const timeoutObj = empObj.timeOutEvents.find(dayObj => dayObj.date === date)
+    const timeoutHours = timeoutObj.hour
+    const time = timeoutHours - timeinHours
+    const hours = Math.floor(time/100)
+    return hours
+}
+
+
