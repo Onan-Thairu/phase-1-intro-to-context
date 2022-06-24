@@ -55,3 +55,12 @@ function wagesEarnedOnDate(empObj, date) {
     const payPerHour = empObj.payPerHour
     return hoursWorked * payPerHour
 }
+
+function allWagesFor(empObj) {
+    const datesArray = empObj.timeInEvents
+    let total = 0
+    datesArray.forEach(obj => {
+        total += wagesEarnedOnDate(empObj, obj.date)
+    })
+    return total
+}
